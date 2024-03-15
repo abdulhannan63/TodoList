@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div class="bg-image"></div>
+
+    <div class="main-div">
+        <div class="header">
+            <h1>To Do List</h1>
+        </div>
+        <div class="Todo-app">
+            <h1>Add Here</h1>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add" onchange="addItem()">
+                <button onclick="addEvent()">Add</button>
+            </div>
+            <ul id="list-container">
+                
+            </ul>
+        </div>
+    </div>
+    <script>
+        const inputBox = document.getElementById('input-box');
+        const  listContainer = document.getElementById("list-container");
+        const addEvent = ()=>{
+            if(inputBox.value ===''){
+                alert("You must write somtthing!");
+            }else{
+                let li =document.createElement( "li") ;
+                li.innerHTML = inputBox.value;
+                listContainer.appendChild(li);
+                let sp=document.createElement("span");
+                sp.innerHTML='\u00d7';
+                li.appendChild(sp);
+
+            }
+            inputBox.value="";
+        }
+        listContainer.addEventListener('click',(e)=>{
+            if(e.target.tagName=='LI'){
+            e.target.classList.toggle("checked");
+        }else if(e.target.tagName === "SPAN") {
+            e.target.parentElement.remove();
+        }
+        },false)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    background-image: url(Photos/night-adventure-with-fairy-glowing-object-generative-ai.jpg);
+    background-size: cover;
+    
+}
+
+.header {
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    color: aliceblue;
+    border-bottom: 2px  solid white;
+    width: 400px;
+    margin: auto auto;
+}
+
+.header h1 {
+
+    font-family: "Allison", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+
+.Todo-app {
+    color: aliceblue !important;
+    width: 100%;
+    background-color: rgb(26, 26, 26);
+    max-width: 540px;
+    
+    margin: 50px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background: aliceblue;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+
+}
+.row input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    flex: .2;
+    padding: 15px;
+    font-weight: 14px;
+    background: rgb(161, 54, 161);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color ease-in;
+    font-size: 15px;
+    color: #edeef0;
+}
+li{
+    list-style: none;
+    padding: 12px 8px 12px 50px ;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(Photos/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+li.checked::before {
+    background-image: url(Photos/checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+}
